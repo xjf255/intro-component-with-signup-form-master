@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="./sources/style.css  ">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
   <main>
     <div class="description">
-      <h1 class="description_title">
+      <h1 class="description__title">
         Learn to code by watching others
       </h1>
-      <p class="description_text">
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable. 
+      <p class="description__text">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
       </p>
     </div>
     <div class="form">
-      <p>Try it free 7 days then $20/mo. thereafter</p>
-      
+      <span class="ofert">
+        <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+      </span>
+
+    <div class="form__body">
       <form action="">
         <input type="text" placeholder="First Name">
         <input type="text" placeholder="Last Name">
         <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">  
-        <button>Claim your free trial</button>
+        <input type="password" placeholder="Password">
+        <input type="submit" id="submit" value="Claim your free trial">
       </form>
-      <span>By clicking the button, you are agreeing to our Terms and Services</span>
+      <span class="terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></span>
+    </div>
+      
     </div>
 
   </main>
   <script src="sources/main.js"></script>
 </body>
+
 </html>
