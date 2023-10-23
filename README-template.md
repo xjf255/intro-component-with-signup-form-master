@@ -15,6 +15,7 @@ Users should be able to:
 ### Screenshot
 
 ![](images/Screenshot.png)
+![](images/Screenshot-active-states.png)
 
 ### Links
 

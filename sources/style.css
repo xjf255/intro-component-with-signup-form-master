@@ -15,14 +15,14 @@
 body{
     min-width: 320px;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url(../images/bg-intro-mobile.png);
     background-repeat: repeat;
     background-color: var(--Red);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 main{
     width: 100%;
@@ -83,7 +83,7 @@ form > input{
     margin: 10px 0;
     border: 1px solid var(--Grayish-Blue);
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
 }
 form > input::placeholder{
@@ -91,6 +91,28 @@ form > input::placeholder{
 }
 form > input:focus{
     outline-color: black;
+}
+.error:required:invalid{
+    border: 1px solid var(--Red);
+    background-image: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+.error:required:invalid::placeholder{
+    color: white;
+}
+.error:nth-child(5):required:invalid::placeholder{
+    color: var(--Red);
+}
+.invalid{
+    display: none;
+    color: var(--Red);
+    font-size: .7rem;
+    font-weight: 400;
+    margin: 0 0 10px 10px;
+    /* display: block; */
+    text-align: right;
+    /* display: flex; */
 }
 #submit{
     background-color: var(--Green);
@@ -104,18 +126,19 @@ form > input:focus{
 .terms{
     /* background-color: blue; */
     display: block;
-    font-size: .6rem;
+    font-size: .7rem;
     color: var(--Grayish-Blue);
     text-align: center;
     margin: 0 30px;
 }
 .terms strong{
     color: var(--Red);
-    font-weight: 400;
-    font-size: .6rem;
+    font-weight: 700;
+    font-size: .7rem;
 }
 @media (width > 768px){
     body{
+        height: 100vh;
         background-image: url(../images/bg-intro-desktop.png);
         background-repeat: no-repeat;
         display: flex;
@@ -124,7 +147,7 @@ form > input:focus{
     }
     main{
         flex-direction: row;
-        width: 60%;
+        width: 80%;
     }
     .description{
         width: 50%;
@@ -152,5 +175,8 @@ form > input:focus{
         justify-content: center;
         align-items: center;
         padding: 30px;
+    }
+    .form__body{
+        width: 100%;    
     }
 }

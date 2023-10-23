@@ -32,10 +32,14 @@
 
     <div class="form__body">
       <form action="">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
+        <input class="input__text" id="name" type="text" placeholder="First Name" required autocomplete="off">
+        <span class="invalid">First Name cannot be empty</span>
+        <input class="input__text" id="last_name" type="text" placeholder="Last Name" required>
+        <span class="invalid">Last Name cannot be empty</span>
+        <input class="input__text" id="email" type="email" placeholder="Email Address" required autocomplete="off">
+        <span class="invalid">Look like this is not an email</span>
+        <input class="input__text" id="password" type="password" placeholder="Password" required>
+        <span class="invalid">Password cannot be empty</span>
         <input type="submit" id="submit" value="Claim your free trial">
       </form>
       <span class="terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></span>
